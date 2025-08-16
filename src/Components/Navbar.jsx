@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import robot from "../assets/robot.png";
+import { LuShoppingCart } from "react-icons/lu";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -18,14 +19,26 @@ export default function Navbar() {
           <p className="cursor-pointer" onClick={() => navigate("/")}>
             خانه
           </p>
-          <p className="cursor-pointer hidden sm:inline-block" onClick={() => navigate("/about")}>
+          <p
+            className="cursor-pointer hidden sm:inline-block"
+            onClick={() => navigate("/about")}
+          >
             درباره ما
           </p>
-          <p className="cursor-pointer hidden sm:inline-block" onClick={() => navigate("/contact")}>
+          <p
+            className="cursor-pointer hidden sm:inline-block"
+            onClick={() => navigate("/contact")}
+          >
             تماس با ما
           </p>
         </div>
-        <div className="flex items-center gap-2" onClick={() => navigate("/")}>
+        <div className="flex items-center gap-2">
+          <p
+            className="cursor-pointer ml-6 text-white"
+            onClick={() => navigate("/contact")}
+          >
+            <LuShoppingCart size={28} />
+          </p>
           <h1 className="hidden flex-col items-center justify-center font-bold text-xl sm:flex">
             <span className="text-orange-400 -rotate-45 translate-y-2">
               ROBO
@@ -33,6 +46,7 @@ export default function Navbar() {
             <span className="text-pink-600 -rotate-45 translate-x-4">!Egg</span>
           </h1>
           <img src={robot} className="w-16" />
+          
         </div>
       </div>
     </nav>
