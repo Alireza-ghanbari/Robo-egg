@@ -4,7 +4,7 @@ import { IoLogoInstagram } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <footer className="container py-4 px-8 mt-32 sm:fixed bottom-8 right-0 left-0 ">
+    <footer className="container py-4 px-8 mt-32 sm:fixed bottom-2 right-0 left-0 ">
       <div className="w-full flex items-center justify-between bg-sky-700 rounded-2xl px-3 py-2">
         <div className="">
             <img src={robot} className="h-14" />
