@@ -7,16 +7,19 @@ export default function CodeChecker({ code,handlePage }) {
   const [questionData, setQuestionData] = useState(null);
   const [error, setError] = useState("");
 
-  const codeQuestions = [
-    { question: "پایتخت ایران چیست؟", answer: "تهران" },
-    { question: "ریشه دوم عدد ۲۵ چیست؟", answer: "5" },
-    { question: "چه کسی نسبیت را کشف کرد؟", answer: "آلبرت اینشتین" },
-    { question: "نویسنده رمان دن کیشوت کیست؟", answer: "سروانتس" },
-  ];
+const codeQuestions = [
+  { question: "تعداد قاره‌های جهان چند است؟", answer: "7" },
+  { question: "چند درجه در یک دایره کامل وجود دارد؟", answer: "360" },
+  { question: "حاصل ضرب ۸ در ۷ چند است؟", answer: "56" },
+  { question: "سال میلادی فعلی چیست؟", answer: "2025" },
+  { question: "یک ساعت چند دقیقه دارد؟", answer: "60" },
+  { question: "تعداد روزهای یک سال عادی چند است؟", answer: "365" },
+  { question: "عدد پی تا دو رقم اعشار چند است؟", answer: "3.14" },
+];
 
   const handleCheckCode = () => {
     if (userCode == code) {
-      const randomNum = Math.floor(Math.random() * 4);
+      const randomNum = Math.floor(Math.random() * 8);
       setQuestionData(codeQuestions[randomNum]);
       setError("");
     } else {

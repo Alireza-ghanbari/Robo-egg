@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Rokh", sans-serif;
   user-select: none;
+  background-color: rgb(196, 196, 196);
 }
 
 @utility container {
