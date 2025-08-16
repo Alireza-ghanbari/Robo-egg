@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <p
             className="cursor-pointer ml-6 text-white"
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/")}
           >
             <LuShoppingCart size={28} />
           </p>
