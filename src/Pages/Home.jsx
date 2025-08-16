@@ -1,5 +1,7 @@
 import { useState } from "react";
 import RandomBoxes from "../Components/GiftPicker";
+import CodeChecker from "../Components/CodeChecker";
+import Score from "../Components/Score";
 
 export default function Home() {
   const [page, setPage] = useState("random");
@@ -22,10 +24,10 @@ export default function Home() {
           code={code}
         />
       ) : page == "codeChecker" ? (
-        "codeChecker"
-      ) : (
-        "else"
-      )}
+        <CodeChecker code={code} handlePage={handlePage} />
+      ) : page == "score" ? (
+        <Score handlePage={handlePage} />
+      ) : "else"}
     </div>
   );
 }
